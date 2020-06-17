@@ -8,10 +8,10 @@
 #         counter += 1
 #     return result
 # print(funcs(artem))
-'''напиши функцию, которая принимает число. При заданном целом числе n посчитайте n + nn + nnn'''
-def func(a):
-    aa = int(str(a)+str(a))
-    aaa = int(str(a)+str(a)+str(a))
-    return a+aa+aaa
-print(func(15))
+# '''напиши функцию, которая принимает число. При заданном целом числе n посчитайте n + nn + nnn'''
+# def func(a):
+#     aa = int(str(a)+str(a))
+#     aaa = int(str(a)+str(a)+str(a))
+#     return a+aa+aaa
+# print(func(15))
 

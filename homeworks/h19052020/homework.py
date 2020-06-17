@@ -1,36 +1,11 @@
-#
-# import urllib.request
-# import json
-#
-# url = 'https://api.covid19api.com/summary'
-#
-# with urllib.request.urlope аn(url) as response:
-#     data = response.read()
-#     corona = json.loads(data)
-# world = corona['Global']
-# world_confirmed = str(world['TotalConfirmed'])
-# world_deaths= str(world['TotalDeaths'])
-# print('В мире')
-# print('Заболевшых: '+world_confirmed)
-# print("Смертей: "+world_deaths)
-# print('------------------------------------------------------')
-# url = 'https://api.covid19api.com/country/ukraine'
-# with urllib.request.urlopen(url) as respouns:
-#     data = respouns.read()
-#     dict_data = json.loads(data)
-# last_data = dict_data[-1]
-# ukrain_confirmed = str(last_data['Confirmed'])
-# ukrain_deaths= str(last_data['Deaths'])
-# print('В Украине')
-# print('Заболевшых: '+ukrain_confirmed)
-# print("Смертей: "+ukrafrom typing import List, Dict, Union, Generator
-# import random
-# import string
-#
-# # We will work with such dicts
-# ST = Dict[str, Union[str, int]]
-# # And we will put this dicts in list
-# DT = List[ST]
+from typing import List, Dict, Union, Generator
+import random
+import string
+
+# We will work with such dicts
+ST = Dict[str, Union[str, int]]
+# And we will put this dicts in list
+DT = List[ST]
 
 
 def task_1_fix_names_start_letter(data: DT) -> DT:
@@ -39,10 +14,11 @@ def task_1_fix_names_start_letter(data: DT) -> DT:
 
     Examples:
         fix_names_start_letters([{'name': 'Alex', 'age': 26}, {'name': 'denys', 'age': 89}])
-        >>> [{'name': 'Alex', 'age': 26}, {'name': 'Denys', 'age': 89}]
+        >>> "[{'name': 'Alex', 'age': 26}, {'name': 'Denys', 'age': 89}]"
     """
 
-    pass
+    a = data.pop('key', None)
+    return a
 
 
 def task_2_remove_dict_fields(data: DT, redundant_keys: List[str]) -> DT:
@@ -51,7 +27,7 @@ def task_2_remove_dict_fields(data: DT, redundant_keys: List[str]) -> DT:
 
     Examples:
        remove_dict_field([{'name': 'Alex', 'age': 26}, {'name': 'denys', 'age': 89}], 'age')
-        >>> [{'name': 'Alex'}, {'name': 'denys'}]
+        >>> "[{'name': 'Alex'}, {'name': 'denys'}]"
     """
     pass
 
@@ -61,25 +37,32 @@ def task_3_find_item_via_value(data: DT, value) -> DT:
     Find and return all items that has @searching value in any key
     Examples:
         find_item_via_value([{'name': 'Alex', 'age': 26}, {'name': 'denys', 'age': 89}], 26)
-        >>> [{'name': 'Alex', 'age': 26}]
+        >>>"[{'name': 'Alex', 'age': 26}]"
     """
-    pass
 
 
 def task_4_min_value_integers(data: List[int]) -> int:
     """
     Find and return minimum value from list
     """
-
-    pass
+    a = None
+    for x in data:
+        if a <= x:
+            x = a
+        else:
+            continue
+    return a
 
 
 def task_5_min_value_strings(data: List[Union[str, int]]) -> str:
     """
-    Find the longest string
+    Find the longest string#Найди самую длинную строку
     """
+    a = 0
 
-    pass
+    for x in data:
+        a = a + 1
+    return a
 
 
 def task_6_min_value_list_of_dicts(data: DT, key: str) -> ST:
@@ -97,14 +80,21 @@ def task_7_max_value_list_of_lists(data: List[List[int]]) -> int:
     Find max value from list of lists
     """
 
-    pass
+    a = None
+    for x in data:
+        if x >= a:
+            a = x
+    return a
 
 
 def task_8_sum_of_ints(data: List[int]) -> int:
     """
     Find sum of all items in given list
     """
-    pass
+    a = 0
+    for x in data:
+        a = a + x
+    return a
 
 
 def task_9_sum_characters_positions(text: str) -> int:
@@ -115,9 +105,9 @@ def task_9_sum_characters_positions(text: str) -> int:
 
     Examples:
         task_9_sum_characters_positions("A")
-        >>> 65
+        >>> "65"
         task_9_sum_characters_positions("hello")
-        >>> 532
+        >>> "532"
 
     """
     pass
@@ -130,9 +120,9 @@ def task_10_generator_of_simple_numbers() -> Generator[int, None, None]:
     Examples:
         a = task_10_generator_of_simple_numbers()
         next(a)
-        >>> 2
+        >>> "2"
         next(a)
-        >>> 3
+        >>> "3"
     """
     pass
 
@@ -142,4 +132,7 @@ def task_11_create_list_of_random_characters() -> List[str]:
     Create list of 20 elements where each element is random letter from latin alphabet
 
     """
-    pass
+    import random
+    a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w']
+    b = random.a()
+    return b
