@@ -1,3 +1,6 @@
+import datetime
+
+
 # class App():
 #     def test(self):  # МЕТОД КЛАСА
 #         return 'Helo from class'
@@ -11,18 +14,41 @@ class Student():
         self.age = age
         self.everage = everage
 
+    def full_name(self):
+        full_name = self.name + ' ' + self.lastname
+        return full_name
 
-Artem = Student('Artem', 15, everage=10, lastname='Pilipchuk')
-print(Artem.name)
-print(Artem.age)
-print(Artem.everage)
-print(Artem.lastname)
-print('--------------------------------')
-Dasha = Student(name='Dasha', age=11, everage=2, lastname='Anohina')
-print(Dasha.name)
-print(Dasha.age)
-print(Dasha.everage)
-print(Dasha.lastname)
+    def __str__(self):
+        return self.full_name()
+
+    def __repr__(self):
+        return f'Student({self.name}, {self.age}, {self.everage}, {self.lastname})'    def __repr__(self):
+        return f'Student({self.name}, {self.age}, {self.everage}, {self.lastname})'
+
+    def __str__(self):
+        return f'name is : {self.name},...'
+
+    def age1(self, age):
+        self.age = age
+        a = self.age
+        now = datetime.datetime.now()
+        year = now.year
+        now_old = now.year - a
+        return now_old
+
+
+# Artem = Student('Artem', 15, everage=10, lastname='Pilipchuk')
+# print(Artem.name)
+# print(Artem.age)
+# print(Artem.everage)
+# print(Artem.lastname)
+# print(Artem.full_name())
+# # print('--------------------------------')
+# Dasha = Student(name='Dasha', age=11, everage=2, lastname='Anohina')
+# print(Dasha.name)
+# print(Dasha.age)
+# print(Dasha.everage)
+# print(Dasha.lastname)
 # Petro = Student(name='Petro', age=10, everage=5, lastname='Kazanin')
 # print(Petro.name)
 # print(Petro.age)
