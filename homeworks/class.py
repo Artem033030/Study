@@ -14,13 +14,16 @@ class Student():
         self.age = age
         self.everage = everage
 
+    # дз на 31 - 32
     def full_name(self):
         full_name = self.name + ' ' + self.lastname
         return full_name
 
+    # дз на 31 - 32
     def __str__(self):
         return self.full_name()
 
+    # дз на 31 - 32
     def __repr__(self):
         return f'Student({self.name}, {self.age}, {self.everage}, {self.lastname})'
 
@@ -28,8 +31,9 @@ class Student():
         #
         #     return f'Student({self.name}, {self.age}, {self.everage}, {self.lastname})'
 
+    # дз на 31 - 32
     def __str__(self):
-        return f'name is : {self.name},...'
+        return f'name is : {self.name},lastname is : {self.lastname},age is : {self.age},everage is : {self.everage}'
 
     def age1(self, age):
         a = self.age
@@ -54,18 +58,6 @@ class Student():
 
     def __ge__(self, other):
         return self.everage >= other.everage
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Artem = Student('Artem', 15, everage=10, lastname='Pilipchuk')
