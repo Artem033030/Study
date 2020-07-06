@@ -45,14 +45,11 @@ class Humen():
 class Man(Humen):
     def __init__(self, eat, drink, type, work):
         super(Man, self).__init__(eat, drink, type,work)
-        self.work = work
-
-    def work(self):
-        return 'He is work'
+        self.work = 'He is work'
 
 
 class Women(Humen)
-    def __init__(self, eat, drink, type, cook):
+    def __init__(self, eat, drink, type):
         super(Woman, self).__init__(eat, drink, type, work)
-        self.work = cook
+        self.work = 'she is cook'
 
