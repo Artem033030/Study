@@ -1,36 +1,52 @@
-class calculator():
+class Calculator:
 
-    def _add(self, a, b):
+    def __init__(self):
+        self.a = None
+        self.b = None
+        self.result = None
+
+    def _add(self):
+        return self.a + self.b
+
+    def _substr(self):
+        return self.a - self.b
+
+    def _mult(self):
+        return self.a * self.b
+
+    def _div(self):
+        return self.a / self.b
+
+    def act(self, action, a, b):
         self.a = a
         self.b = b
-        return a + b
+        if action == '+':
+            self.result = self._add()
+            return self.result
 
-    def _edd(self, a, b):
-        self.a = a
-        self.b = b
-        return a - b
+        if action == '-':
+            self.result = self._substr()
+            return self.result
 
-    def _odd(self, a, b):
-        self.a = a
-        self.b = b
-        return a * b
+        if action == '*':
+            self.result = self._mult()
+            return self.result
 
-    def _ad(self, a, b):
-        self.a = a
-        self.b = b
-        return a / b
+        if action == '/':
+            self.result = self._div()
+            return self.result
 
-    def first_value(self, a):
 
-    def second_value(self, b):
-
-    def act(self, a, b):
-        rt = input("+ , - , * , /")
-        if rt == "+":
-            add(a, b)
-        if ot == "-":
-            edd(a, b)
-        if mt == "*":
-            odd(a, b)
-        if it == "/":
-            ad(a,b)
+calc = Calculator()
+calc.act(2)
+calc.act(3)
+print(calc.act('+'))
+calc.act(2)
+calc.act(3)
+print(calc.act('-'))
+calc.act(2)
+calc.act(3)
+print(calc.act('*'))
+calc.act(2)
+calc.act(3)
+print(calc.act('/'))
