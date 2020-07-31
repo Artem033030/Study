@@ -5,6 +5,7 @@ class Calculator:
         self.b = 0, 000
         self.result = 0, 000
 
+
     def _add(self):
         return self.a + self.b
 
@@ -22,21 +23,40 @@ class Calculator:
         self.b = b
         if action == '+':
             self.result = self._add()
+            print(self.a)
+            print("+")
+            print(self.b)
+            print('-------------')
+
 
         if action == '-':
             self.result = self._substr()
+            print(self.a)
+            print("-")
+            print(self.b)
+            print('-------------')
 
         if action == '*':
             self.result = self._mult()
+            print(self.a)
+            print("*")
+            print(self.b)
+            print('-------------')
 
         if action == '/':
             self.result = self._div()
+            print(self.a)
+            print("/")
+            print(self.b)
+            print('-------------')
         return self.result
 
 
 calc = Calculator()
-add = calc.act("+", 1.444, 2.555)
+add = calc.act("*", 1.006, 2.005)
 print(add)
+
+
 # print(1)
 # if add == 3:
 #     print("done")
