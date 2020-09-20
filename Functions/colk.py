@@ -1,3 +1,6 @@
+from fractions import Fraction
+
+
 class Calculator:
 
     def __init__(self):
@@ -8,12 +11,11 @@ class Calculator:
         # self.a = float(round(0,000))
         # self.b = float(round(0,000))
         # self.result = (0,000)
-        self.a = 0, 000
-        self.b = 0, 000
+        self.a = 0,000
+        self.b = 0,000
         self.result = 0, 000
         self.chain = [self.a, ]
         # self.chain.append(self.b)
-        print(self.chain)
 
     def _add(self):
         self.chain.append('+')
@@ -23,7 +25,7 @@ class Calculator:
         return self.a + self.b
 
     def _substr(self):
-        self.chain.append('-')
+        self.chain.append("-")
         self.chain.append(self.b)
         self.chain.append('=')
         return self.a - self.b
@@ -76,12 +78,11 @@ class Calculator:
         #     d.append(self.result)
         #     print(d)
         self.chain.append(self.result)
-        print(self.chain)
         return self.result
 
 
 calc = Calculator()
-add = calc.act("+", 1,2)
+add = calc.act("*", 1, 2)
 print(add)
 
 
@@ -109,6 +110,37 @@ print(add)
 # else:
 #     print('nope')
 # class thousandth(Calculator):
+
+class One(Calculator):
+    def __init__(self):
+        counter = []
+        self.b = super(Calculator, self).__init__(self.b, self.a, self.result)
+        for x in self.result:
+            counter.append(x)
+        if self.b == 0:
+            self.b = counter[::-1]
+
+
+class Two(Calculator):
+    def __init__(self):
+        self.x = super(Calculator, self).__init__(self.b, self.a, self.result)
+        chein = []
+        for check in self.a:
+            chein.append(check)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
