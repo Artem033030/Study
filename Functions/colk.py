@@ -14,7 +14,7 @@ class Calculator:
         self.a = 0,000
         self.b = 0,000
         self.result = 0, 000
-        self.chain = [self.a, ]
+        self.chain = [self.a]
         # self.chain.append(self.b)
 
     def _add(self):
@@ -113,8 +113,10 @@ print(add)
 
 class One(Calculator):
     def __init__(self):
-        counter = []
         self.b = super(Calculator, self).__init__(self.b, self.a, self.result)
+
+    def colk(self):
+        counter = []
         for x in self.result:
             counter.append(x)
         if self.b == 0:
@@ -124,6 +126,8 @@ class One(Calculator):
 class Two(Calculator):
     def __init__(self):
         self.x = super(Calculator, self).__init__(self.b, self.a, self.result)
+
+    def upp(self):
         chein = []
         for check in self.a:
             chein.append(check)
