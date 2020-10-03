@@ -37,7 +37,7 @@ class Calculator:
         return self.a * self.b
 
     def _div(self):
-        self.chain.append('/')
+        self.chain.append(divmod())
         self.chain.append(self.b)
         self.chain.append('=')
         return self.a / self.b
@@ -78,7 +78,8 @@ class Calculator:
         #     d.append(self.result)
         #     print(d)
         self.chain.append(self.result)
-        return self.result
+
+        return
 
 
 calc = Calculator()
@@ -121,6 +122,7 @@ class One(Calculator):
             counter.append(x)
         if self.b == 0:
             self.b = counter[::-1]
+
 
 
 class Two(Calculator):
