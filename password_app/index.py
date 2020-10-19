@@ -22,7 +22,7 @@ def creat_storage():
 
     key = input('Please name of site: ')
     password = input('Please password of site: ')
-    storage = dict(key=password)
+    storage[key]= password
     print(storage)
 
 
