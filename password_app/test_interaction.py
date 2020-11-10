@@ -25,20 +25,20 @@ class TestInteraction(unittest.TestCase):
 
     def test_creat_line(self):
         for (key, val) in data_create_line.items():
-            result = PH.create_line(key, val)
+            result = INT.create_line(key, val)
             self.assertEqual(result, expected_create_line[key])
 
     def test_del_line(self):
         for (key, val) in create_test_del_line.items():
-            result = PH.create_line(key, val)
+            result = INT.create_line(key, val)
             self.assertEqual(result, expected_del_line[key])
 
     def test_read_line(self):
         for (key, val) in create_test_del_line.items():
-            result = PH.create_line(key, val)
+            result = INT.create_line(key, val)
             self.assertEqual(result, read_test_line[key])
 
     def test_change_line(self):
         for (key, val) in create_test_del_line.items():
-            result = PH.create_line(key, val)
-            self.assertEqual(result, PH.change_line[key])
+            result = INT.create_line(key, val)
+            self.assertEqual(result, INT.change_line[key])
