@@ -26,10 +26,10 @@ class TestPassword(unittest.TestCase):
             result = handler.create_line(key, val)
             self.assertEqual(result, expected_read_line[key])
 
-    def test_change_line(self):
+    def test_change_line(self, password):
         for (key, val) in expected_change_line.items():
             result = handler.create_line(key, val)
-            self.assertEqual(result, handler.change_line[key])
+            self.assertEqual(result, handler.change_line(key, val))
 
 
 if __name__ == '__main__':

@@ -12,7 +12,7 @@ class Interaction:
         key_sec = input('Enter key: ')
         password_sec = input('Enter password: ')
         if key_sec in storage:
-            print('This key is already in use, you can use change_line')
+            return f'This key is already in use, you can use change_line'
         else:
             return self.ph.create_line(key_sec, password_sec)
 
@@ -24,14 +24,13 @@ class Interaction:
                 return self.ph.del_line(my_key, password)
 
             else:
-                print("i'm sorry your password don't correct")
+                return f"i'm sorry your password don't correct"
         else:
-            print("i'm sorry your name don't correct")
+            return f"i'm sorry your name don't correct"
 
     def read_line(self):
         ent_key = input('What key printing: ')
-        if ent_key in storage:
-            self.ph.read_line(ent_key)
+        self.ph.read_line(ent_key)
 
     def change_line(self):
         my_key = input('Enter site: ')
@@ -41,6 +40,6 @@ class Interaction:
                 new_password = input('Enter new password: ')
                 return self.ph.change_line(my_key, new_password)
             else:
-                print("i'm sorry your password don't correct")
+                return f"i'm sorry your password don't correct"
         else:
-            print("i'm sorry your name don't correct")
+            return f"i'm sorry your name don't correct"

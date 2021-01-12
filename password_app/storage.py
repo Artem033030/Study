@@ -1,13 +1,13 @@
 import json
 
-# from password_app.constants import PATH_TO_STORAGE
+from constants import PATH_TO_STORAGE
 
 
 class Storage:
     def read_storage(self):
-        with open('/Users/artempilipchuk/pass_storage.json') as f:
+        with open(PATH_TO_STORAGE) as f:
             data = json.load(f)
-            print(data)
+            return data
 
 
 test = Storage()
